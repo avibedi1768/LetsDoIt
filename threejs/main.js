@@ -3,6 +3,8 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 import me from './me.png'
+import moonImage from './moon.jpg'
+import normalImage from './normal.jpg'
 
 const scene = new THREE.Scene() //container
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
@@ -64,8 +66,8 @@ const arsh = new THREE.Mesh(
 scene.add(arsh)
 
 //moon
-const moonTexture = new THREE.TextureLoader().load('./moon.jpg')
-const normalTexture = new THREE.TextureLoader().load('./normal.jpg')
+const moonTexture = new THREE.TextureLoader().load(moonImage)
+const normalTexture = new THREE.TextureLoader().load(normalImage)
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
