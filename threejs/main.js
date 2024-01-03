@@ -2,6 +2,8 @@ import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
+import me from './me.png'
+
 const scene = new THREE.Scene() //container
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
 const renderer = new THREE.WebGLRenderer({
@@ -15,7 +17,7 @@ renderer.render(scene, camera)
 
 // const geometry = new THREE.TorusGeometry(5, 1.2, 30, 20)
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100)
-const material = new THREE.MeshStandardMaterial({ color: 0xFF6347, wireframe: true })
+const material = new THREE.MeshStandardMaterial({ color: 0x823aff, wireframe: true })
 const torus = new THREE.Mesh(geometry, material)
 
 scene.add(torus)
@@ -50,11 +52,11 @@ function addStar() {
 Array(200).fill().forEach(addStar)
 
 //space bg
-const spaceTexture = new THREE.TextureLoader().load('./space.jpg')
-scene.background = spaceTexture
+// const spaceTexture = new THREE.TextureLoader().load('./space.jpg')
+// scene.background = spaceTexture
 
 //arsh box
-const arshTexture = new THREE.TextureLoader().load('./me.jpg')
+const arshTexture = new THREE.TextureLoader().load(me)
 const arsh = new THREE.Mesh(
   new THREE.BoxGeometry(3, 3, 3),
   new THREE.MeshBasicMaterial({ map: arshTexture })
@@ -79,9 +81,9 @@ moon.position.setX(-10)
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top
-  moon.rotation.x += 0.05
-  moon.rotation.y += 0.075
-  moon.rotation.z += 0.05
+  moon.rotation.x += 0.01
+  moon.rotation.y += 0.01
+  moon.rotation.z += 0.01
 
   arsh.rotation.y += 0.01
   arsh.rotation.z += 0.01
@@ -98,7 +100,11 @@ function animate() {
   torus.rotation.y += 0.005
   torus.rotation.z += 0.01
 
-  // moon.rotation.y += 0.01
+  arsh.rotation.y += 0.01
+  arsh.rotation.z += 0.01
+
+  moon.rotation.x += 0.01
+  moon.rotation.y += 0.01
 
   // controls.update()
 
