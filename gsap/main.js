@@ -1,6 +1,7 @@
 // gsap.to(".photo", { duration: 2, x: 300, backgroundColor: "#560563", borderRadius: "20%", border: "5px solid white", ease: "back" })
 //there are various ease available in gsap:     https://gsap.com/docs/v3/Eases/
 
+//FOR TEST: IMAGE AND CIRCLES:
 //random color function
 function getRandomColor() {
   const red = Math.floor(Math.random() * 256);
@@ -35,9 +36,76 @@ elements.forEach(element => {
 // tl.to(".circle", { duration: 0.5, opacity: 0, x: 300, ease: "power3.out" }, "circlesOutro")
 
 var tl = gsap.timeline()
+//load animation
 gsap.from("#module", { duration: 3, opacity: 0, scale: 0.3, y: 150, ease: "back" })
 gsap.from("#left", { duration: 3, opacity: 0, scale: 0.3, rotation: 180, ease: "back" })
 gsap.from("#right", { duration: 3, opacity: 0, scale: 0.3, rotation: -180, ease: "back" })
+
+//scroll animation
+gsap.registerPlugin(ScrollTrigger)
+// Initial properties for #left
+gsap.set("#left", {
+  x: 0,
+  y: 0,
+  autoAlpha: 1,
+});
+gsap.to("#left", {
+  scrollTrigger: {
+    trigger: "#white",
+    // markers: true,
+    scrub: true,
+    // start: 3-200px center",
+    end: "center top",
+    toggleActions: "restart pause reverse reverse",
+  },
+  x: "-300vh",
+  y: "110vh",
+  ease: "none",
+  duration: 5,
+  autoAlpha: 0,
+})
+
+//right
+gsap.set("#right", {
+  x: 0,
+  y: 0,
+  autoAlpha: 1,
+})
+gsap.to("#right", {
+  scrollTrigger: {
+    trigger: "#white",
+    // markers: true,
+    scrub: true,
+    end: "center top",
+    toggleActions: "restart pause reverse reverse"
+  },
+  x: "300vh",
+  y: "110vh",
+  ease: "none",
+  duration: 5,
+  autoAlpha: 0,
+})
+
+//module
+gsap.set("#module", {
+  x: 0,
+  y: 0,
+})
+gsap.to("#module", {
+  scrollTrigger: {
+    trigger: "#white",
+    markers: true,
+    scrub: true,
+    end: "center top",
+    toggleActions: "restart pause reverse reverse",
+  },
+  x: "28vh",
+  y: "100vh",
+  // width:"50%",
+  ease: "back",
+  duration: 3,
+})
+
 
 // document.addEventListener('DOMContentLoaded', function () {
 //   const tracer = document.querySelector('.tracer');
@@ -52,6 +120,7 @@ gsap.from("#right", { duration: 3, opacity: 0, scale: 0.3, rotation: -180, ease:
 //   });
 // });
 
+//CUSTOM CURSOR
 // Check if it's a touch device
 const isTouchDevice = 'ontouchstart' in window;
 const createCursorFollower = () => {
