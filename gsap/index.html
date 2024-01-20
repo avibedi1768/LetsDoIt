@@ -11,7 +11,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.9/ScrollMagic.min.js"></script> ``` -->
-
   </head>
   <body>
     <!-- <div id="demo">
@@ -30,14 +29,28 @@
 
     <div class="home">
       <div class="glasses">
+        <div
+          id="module-bg"
+          style="
+            background: #823aff;
+            width: 200px;
+            height: 200px;
+            opacity: 0;
+            filter: blur(100px);
+            border-radius: 50%;
+            position: absolute;
+            z-index: -200;
+          "
+        ></div>
         <img id="module" src="./img/module.png" alt="" />
+
         <img id="left" src="./img/glass-left.jpeg" alt="" />
         <img id="right" src="./img/glass-right.jpeg" alt="" />
       </div>
       <h3>We Present To You</h3>
       <h1>VIZAR1</h1>
     </div>
-    <div id="white" style="background: white; height: 100vh"></div>
+    <div id="white" style="height: 100vh"></div>
     <div id="brown" style="background: brown; height: 100vh"></div>
 
     <script src="main.js"></script>
