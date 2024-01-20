@@ -9,6 +9,27 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   overflow-x: hidden;
 }
+
+/* scroll bar */
+/* width */
+::-webkit-scrollbar{
+  width: 5px;
+}
+/* track */
+::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+/* handle */
+::-webkit-scrollbar-thumb{
+  background: #823aff;
+  border-radius: 10px;
+}
+/* handle on hover */
+::-webkit-scrollbar-thumb:hover{
+  background: #5827ae;
+}
+
 #demo {
   display: flex;
   align-items: center;
