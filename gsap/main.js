@@ -39,7 +39,7 @@
 
 var tl = gsap.timeline()
 //load animation
-gsap.from("#module", { duration: 3, opacity: 0, scale: 0.3, y: 150, ease: "back" })
+gsap.from("#module", { duration: 3, opacity: 0, scale: 0.3, rotation: -500, y: 150, ease: "back" })
 gsap.from("#left", { duration: 3, opacity: 0, scale: 0.3, rotation: 180, ease: "back" })
 gsap.from("#right", { duration: 3, opacity: 0, scale: 0.3, rotation: -180, ease: "back" })
 
@@ -108,9 +108,9 @@ gsap.registerPlugin(ScrollTrigger)
       toggleActions: "restart pause reverse reverse",
     },
     // x: "30vh",
-    x: window.innerWidth > 768 ? "50vh" : "15vh",
+    x: window.innerWidth > 768 ? "45vh" : "10vh",
     y: "100vh",
-    width: "50vh",
+    width: window.innerWidth > 768 ? "40vh" : "20vh",
     ease: "back",
     duration: 3,
   })
