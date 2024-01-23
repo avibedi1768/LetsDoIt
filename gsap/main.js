@@ -1,5 +1,5 @@
 {
-  // gsap.to(".photo", { duration: 2, x: 300, backgroundColor: "#560563", borderRadius: "20%", border: "5px solid white", ease: "back" })
+  // gsap.to(".photo", { duration: 2, x: 300, backgroundColor: "#560563", borderRadius: "20%", border: "5px solid module-explain", ease: "back" })
   //there are various ease available in gsap:     https://gsap.com/docs/v3/Eases/
 
   //FOR TEST: IMAGE AND CIRCLES:
@@ -37,6 +37,21 @@
   // tl.to(".circle", { duration: 0.5, opacity: 0, x: 300, ease: "power3.out" }, "circlesOutro")
 }
 
+//navbar
+{
+  document.querySelector('#show').addEventListener('click', () => {
+    document.getElementById('on-open').style.display = 'block'
+    document.getElementById('show').style.display = 'none'
+    document.getElementById('hide').style.display = 'block'
+  })
+
+  document.querySelector('#hide').addEventListener('click', () => {
+    document.getElementById('on-open').style.display = 'none'
+    document.getElementById('show').style.display = 'block'
+    document.getElementById('hide').style.display = 'none'
+  })
+}
+
 var tl = gsap.timeline()
 //load animation
 gsap.from("#module", { duration: 3, opacity: 0, scale: 0.3, rotation: -500, y: 150, ease: "back" })
@@ -54,7 +69,7 @@ gsap.registerPlugin(ScrollTrigger)
   });
   gsap.to("#left", {
     scrollTrigger: {
-      trigger: "#white",
+      trigger: "#module-explain",
       // markers: true,
       scrub: true,
       // start: 3-200px center",
@@ -78,7 +93,7 @@ gsap.registerPlugin(ScrollTrigger)
   })
   gsap.to("#right", {
     scrollTrigger: {
-      trigger: "#white",
+      trigger: "#module-explain",
       // markers: true,
       scrub: true,
       end: "center top",
@@ -101,14 +116,14 @@ gsap.registerPlugin(ScrollTrigger)
   })
   gsap.to("#module", {
     scrollTrigger: {
-      trigger: "#white",
+      trigger: ".module-explain",
       // markers: true,
       scrub: true,
       end: "center top",
       toggleActions: "restart pause reverse reverse",
     },
     // x: "30vh",
-    x: window.innerWidth > 768 ? "45vh" : "10vh",
+    x: window.innerWidth > 768 ? "40vh" : "10vh",
     y: "100vh",
     width: window.innerWidth > 768 ? "40vh" : "20vh",
     ease: "back",
@@ -122,7 +137,7 @@ gsap.registerPlugin(ScrollTrigger)
   })
   gsap.to("#module-bg", {
     scrollTrigger: {
-      trigger: "#white",
+      trigger: ".module-explain",
       // markers: true,
       scrub: true,
       end: "center top",
