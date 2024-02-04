@@ -1,3 +1,5 @@
+AOS.init();
+
 {
   // gsap.to(".photo", { duration: 2, x: 300, backgroundColor: "#560563", borderRadius: "20%", border: "5px solid module-explain", ease: "back" })
   //there are various ease available in gsap:     https://gsap.com/docs/v3/Eases/
