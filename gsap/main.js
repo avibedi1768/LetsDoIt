@@ -69,7 +69,7 @@ gsap.registerPlugin(ScrollTrigger)
   });
   gsap.to("#left", {
     scrollTrigger: {
-      trigger: "#module-explain",
+      trigger: ".module-explain",
       // markers: true,
       scrub: true,
       // start: 3-200px center",
@@ -93,7 +93,7 @@ gsap.registerPlugin(ScrollTrigger)
   })
   gsap.to("#right", {
     scrollTrigger: {
-      trigger: "#module-explain",
+      trigger: ".module-explain",
       // markers: true,
       scrub: true,
       end: "center top",
@@ -124,7 +124,7 @@ gsap.registerPlugin(ScrollTrigger)
     },
     // x: "30vh",
     x: window.innerWidth > 768 ? "40vh" : "10vh",
-    y: "100vh",
+    y: "80vh",
     width: window.innerWidth > 768 ? "40vh" : "20vh",
     ease: "back",
     duration: 3,
@@ -144,7 +144,7 @@ gsap.registerPlugin(ScrollTrigger)
       toggleActions: "restart pause reverse reverse",
     },
     // x: "28vh",
-    y: "100vh",
+    y: "80vh",
     // width:"50%",
     opacity: 0.7,
     ease: "back",
