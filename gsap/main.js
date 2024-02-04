@@ -152,6 +152,44 @@ gsap.registerPlugin(ScrollTrigger)
   })
 }
 
+//esp
+gsap.from(".esp", {
+  scrollTrigger: {
+    trigger: ".esp",
+    toggleActions: "restart pause reverse reverse",
+  },
+  duration: 3,
+  opacity: 0,
+  scale: 0,
+  ease: "back",
+  rotation: -40,
+  y: "-100px",
+})
+// gsap.to(".esp", {
+//   scrollTrigger: {
+//     trigger: ".esp",
+//     markers: true,
+//     toggleActions: "restart pause reverse reverse",
+//   },
+//   duration: 3,
+//   rotation: 360,
+//   ease: "back",
+// })
+
+//beam splitter
+gsap.from(".bm", {
+  scrollTrigger: {
+    trigger: ".bm",
+    toggleActions: "restart pause reverse reverse",
+  },
+  duration: 3,
+  opacity: 0,
+  scale: 0,
+  ease: "back",
+  rotation: -40,
+  y: "-100px",
+})
+
 //CUSTOM CURSOR
 {
   // Check if it's a touch device
