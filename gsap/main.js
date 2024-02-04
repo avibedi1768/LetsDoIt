@@ -162,7 +162,7 @@ gsap.from(".esp", {
   opacity: 0,
   scale: 0,
   ease: "back",
-  rotation: -40,
+  rotation: window.innerWidth > 768 ? -40 : -20,
   y: "-100px",
 })
 // gsap.to(".esp", {
@@ -186,7 +186,7 @@ gsap.from(".bm", {
   opacity: 0,
   scale: 0,
   ease: "back",
-  rotation: -40,
+  rotation: window.innerWidth > 768 ? -40 : -20,
   y: "-100px",
 })
 
