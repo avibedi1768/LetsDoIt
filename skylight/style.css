@@ -30,7 +30,7 @@ body {
 #navbar .LH {
   padding: 0 4%;
   color: #ffb03b;
-  font-family: 'Roboto', sans-serif;;
+  font-family: "Roboto", sans-serif;
   /* text-shadow: 4px 4px 4px #4a4a4a; */
   font-size: 24px;
 }
@@ -65,7 +65,7 @@ body {
   background: #ffb03b;
 }
 
-#on-open{
+#on-open {
   display: none;
   position: fixed;
   background: rgba(0, 0, 0, 0.7);
@@ -74,7 +74,7 @@ body {
   padding: 80px 0 40px 0;
 }
 
-#on-open a{
+#on-open a {
   text-decoration: none;
   color: white;
   padding: 0 10px;
@@ -142,7 +142,7 @@ body {
   text-align: center;
   /* text-shadow: 4px 4px 4px #ababab; */
   padding: 50px 0 20px 0;
-  font-family: 'Roboto', sans-serif;;
+  font-family: "Roboto", sans-serif;
 }
 
 #product #tagline {
@@ -152,7 +152,7 @@ body {
 #product h3 {
   /* color: #ffb03b; */
   font-size: 32px;
-  font-family: 'Roboto', sans-serif;;
+  font-family: "Roboto", sans-serif;
   /* text-shadow: 4px 4px 4px #ababab; */
   text-align: center;
   margin-top: 80px;
@@ -195,7 +195,7 @@ body {
   margin: 100px 0px;
   text-align: center;
   font-size: 48px;
-  font-family: 'Roboto', sans-serif;;
+  font-family: "Roboto", sans-serif;
   /* text-shadow: 4px 4px 4px #4a4a4a; */
 }
 
@@ -207,7 +207,7 @@ body {
 
 #about .about-content h2 {
   color: #ffb03b;
-  font-family: 'Roboto', sans-serif;;
+  font-family: "Roboto", sans-serif;
   font-size: 30px;
   /* text-shadow: 4px 4px 4px #4a4a4a; */
 }
@@ -239,7 +239,7 @@ body {
   text-align: center;
   padding: 70px 0 30px 0;
   font-size: 48px;
-  font-family: 'Roboto', sans-serif;;
+  font-family: "Roboto", sans-serif;
   /* text-shadow: 4px 4px 4px black; */
 }
 
@@ -288,6 +288,75 @@ body {
   /* text-shadow: 2px 2px rgba(0, 0, 0, 0.3); */
 }
 
+#contact-form-parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30vh;
+}
+
+#contact-form {
+  color: #001f3f;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 50px;
+}
+
+#contact-form-item-parent {
+  border-radius: 20px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  padding: 30px;
+  width: 350px;
+}
+
+#get-frame-heading {
+  color: #001f3f;
+  font-size: 34px;
+}
+
+.contact-form-item label {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.contact-form-item input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #00034e;
+  width: 300px;
+  font-family: "Poppins", sans-serif;
+  color: #00034e;
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.contact-form-item input:focus {
+  outline: none;
+}
+
+#contact-form button {
+  border-radius: 14px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  padding: 10px 20px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#contact-form button:hover {
+  background: rgba(255, 176, 59, 0.8);
+  cursor: pointer;
+}
+
 /* footer */
 #footer {
   background: rgba(254, 254, 254, 0.1);
@@ -297,7 +366,7 @@ body {
 
 #footer h2 {
   color: #ffb03b;
-  font-family: 'Roboto', sans-serif;;
+  font-family: "Roboto", sans-serif;
   font-size: 36px;
 }
 
@@ -320,12 +389,24 @@ body {
 }
 
 /* responsiveness */
+@media (max-width: 1600px) {
+  #contact #contact-form-parent {
+    gap: 10vh;
+  }
+}
+
+@media (max-width: 900px) {
+  #contact #contact-form-parent {
+    gap: 5vh;
+  }
+}
+
 @media (max-width: 750px) {
   #navbar #nav-contents {
     display: none;
     width: 150px;
   }
-  #navbar{
+  #navbar {
     margin: 0 2px;
   }
   #navbar #bars {
@@ -335,7 +416,7 @@ body {
     margin-right: 16vw;
     font-size: 26px;
   }
-  #navbar .LH{
+  #navbar .LH {
     padding: 0;
   }
 }
@@ -368,20 +449,40 @@ body {
   #footer p {
     font-size: 14px;
   }
+  #contact-form {
+    padding: 5px;
+  }
+  #contact-form-item-parent {
+    width: 280px;
+    font-size: 20px;
+  }
+  #get-frame-heading {
+    font-size: 26px;
+  }
+  .contact-form-item input {
+    width: 250px;
+    font-size: 15px;
+  }
+  #contact-form-item-parent {
+    box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+  }
+  #contact-form button {
+    box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+  }
 }
 
 @media (max-width: 375px) {
-  #navbar h2{
+  #navbar h2 {
     margin-right: 5vw;
   }
-  #bars{
+  #bars {
     margin: 0;
   }
-  #navbar #buy{
+  #navbar #buy {
     padding: 8px 14px;
     font-size: 12px;
   }
-  .hero-btn{
+  .hero-btn {
     margin: 10px 0;
     font-size: 12px;
   }
