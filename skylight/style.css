@@ -171,8 +171,8 @@ body {
 }
 
 #product .images p {
-  /* text-align: center; */
-  text-indent: 100px;
+  text-align: center;
+  /* text-indent: 100px; */
 }
 
 #product .images i {

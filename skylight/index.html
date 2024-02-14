@@ -17,8 +17,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&family=Roboto:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;600&family=Inter:wght@300;600&family=Space+Grotesk:wght@300;600&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
       rel="stylesheet"
     />
 
@@ -39,7 +43,7 @@
         <!-- <a href="#about">About</a>     -->
         <a href="#contact">Contact</a>
       </div>
-      <button id="buy">BOOK NOW!</button>
+      <button id="buy" onclick="book_now()">BOOK NOW!</button>
       <i id="bars" class="fas fa-bars"></i>
       <i id="cross" class="fas fa-times"></i>
     </nav>
@@ -58,7 +62,7 @@
         <p>And We Expertise In Brightening Up Your Home.</p>
         <br />
         <button class="hero-btn" onclick="prod()">PRODUCTS</button>
-        <button class="hero-btn">BOOK NOW!</button>
+        <button class="hero-btn" onclick="book_now()">BOOK NOW!</button>
       </div>
     </div>
 
@@ -317,7 +321,7 @@
             <br /><br />
           </div>
 
-          <button>Submit</button>
+          <button onclick="sendMessage()">Submit</button>
         </div>
 
         <!-- instagram -->
@@ -616,10 +620,19 @@
         Cherish love, capture moments, and frame memories that last forever.
       </p>
       <div class="socials">
-        <a href="instagram.com"><i class="fab fa-instagram"></i></a>
-        <a href="instagram.com"><i class="fab fa-facebook-f"></i></a>
-        <a href="instagram.com"><i class="fab fa-whatsapp"></i></a>
-        <a href="instagram.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.instagram.com/skyli.ghtofficial/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+
+        <!-- <a href="instagram.com"><i class="fab fa-facebook-f"></i></a> -->
+
+        <a href="https://wa.me/+918146004250" target="_blank"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+
+        <a href="mailto:info@skyraofficial.com" target="_blank"
+          ><i class="fas fa-envelope"></i
+        ></a>
       </div>
       <p
         style="
@@ -658,6 +671,51 @@
     //for product button
     function prod() {
       window.location.href = "#product";
+    }
+
+    //for book now button
+    function book_now() {
+      window.location.href = "#contact-form-parent";
+    }
+
+    //contact form
+    function sendMessage() {
+      var name = document.getElementById("name").value;
+      var number = document.getElementById("number").value;
+      var address = document.getElementById("address").value;
+      var mail = document.getElementById("mail").value;
+      var item = document.getElementById("number").value;
+
+      if (
+        name == "" ||
+        number == "" ||
+        address == "" ||
+        mail == "" ||
+        item == ""
+      ) {
+        window.alert("Please enter valid info");
+        return;
+      }
+
+      var url =
+        "https://wa.me/+918146004250?text=" +
+        "*Name :* " +
+        name +
+        "%0a" +
+        "*Number :* " +
+        number +
+        "%0a" +
+        "*Address :* " +
+        address +
+        "%0a" +
+        "*Email :* " +
+        mail +
+        "%0a" +
+        "*Item Selected :* " +
+        item +
+        "%0a";
+
+      window.open(url, "_blank").focus();
     }
   </script>
 </html>
